@@ -1,0 +1,219 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2rem;
+}
+
+.hero-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(0,0,0,0.2));
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: #7dd3fc;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-copy {
+  max-width: 620px;
+  color: var(--text);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-stats div {
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(125, 211, 252, 0.1);
+  border: 1px solid rgba(125, 211, 252, 0.2);
+}
+
+.hero-stats strong {
+  color: #f8fafc;
+  font-size: 1.4rem;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.tab-nav button,
+.access-box button,
+.task-actions button,
+.task-form button {
+  border: 1px solid rgba(125, 211, 252, 0.3);
+  background: rgba(125, 211, 252, 0.12);
+  color: #f8fafc;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.tab-nav button.active,
+.access-box button,
+.task-actions button:hover,
+.task-form button:hover {
+  background: rgba(125, 211, 252, 0.3);
+}
+
+.status-pill {
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.13);
+  color: #bbf7d0;
+  width: fit-content;
+}
+
+.panel-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.private-layout {
+  grid-template-columns: 1fr 1fr;
+}
+
+.panel {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(2, 6, 23, 0.66);
+}
+
+.wide-panel {
+  grid-column: 1 / -1;
+}
+
+.panel-copy {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.card-list,
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.card,
+.task-card,
+.empty-card {
+  padding: 1rem;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  font-size: 0.8rem;
+  color: #7dd3fc;
+}
+
+.access-box {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.access-box input,
+.task-form input,
+.task-form textarea {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid rgba(125, 211, 252, 0.2);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.row-inputs {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--text);
+}
+
+.meta-row {
+  display: flex;
+  gap: 0.8rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.task-actions button.danger {
+  background: rgba(248, 113, 113, 0.18);
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+.hint {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .hero-panel,
+  .task-card {
+    flex-direction: column;
+  }
+
+  .private-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .row-inputs,
+  .access-box {
+    flex-direction: column;
+  }
+}
