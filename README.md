@@ -1,1 +1,0 @@
-# shrishailya-ops
